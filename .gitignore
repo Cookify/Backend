@@ -34,3 +34,7 @@ bower.json
 # Ignore pow environment settings
 .powenv
 .idea/
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
