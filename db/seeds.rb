@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+5.times do |i|
+  u = User.create(name: "User #{i}", email: "user#{i}@mailinator.com", password: "cookify")
+  p = Provider.create(name: "Provider #{i}", description: "A provider", user_id: u.id)
+  Package.create(name: "Package ##{i}", duration: "30", provider_id: p.id)
+  ProviderRating.create(rating: "#{i}", comment: "Comment", provider_id: p.id)
+end
